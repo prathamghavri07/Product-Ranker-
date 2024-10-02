@@ -23,6 +23,8 @@ The target variable is “is_clicked” as mentioned in document
 - Imputed_columns =’brand_name, category_name, subcategory_name, Product_name’
 
 ## EDA (Insights)
+![image](https://github.com/user-attachments/assets/a19e6eec-7094-4878-a111-7af96fd3e84d)
+
 - Combo ,Zepto and much are the top searched items
 - Munchies ,Sweet Craving and home essential categories are most searched categories
 - Click through rate on the platform is very low averaging near .1 for most features assigned,CTR of last 30 days (PQC) lies near 0 and above 1 % only 32 searches for that query in given cities exist
@@ -54,6 +56,7 @@ We had options of One hot encoding , Target encoding , label encoding and many m
 
 ## Model
 We are using Learn to rank technique for our analysis
+![image](https://github.com/user-attachments/assets/6ff388c4-4e32-4ecf-8989-82e344a8cbfd)
 
 score(s)=f(query,document) in our case query is search_term & city_id
 
@@ -73,6 +76,7 @@ Qid is a unique id encoded with city_id and search_term ,based on which we rank 
 # Feature Importance
 - Plotting Feature relevance based on our model to see which features have higher weightage in ranking
 - Session_views ,query_product_plt_ctr_60days and product_variant_id_encoded are top 3 features which contribute in predicting if a product is clicked or not
+![image](https://github.com/user-attachments/assets/513f20e1-6660-41c8-8dfb-c0e607b41dbb)
 
 # Ranking Function
 - Creating a ranking function which takes as input Data (X: selected features) and qid (unique id of city and search term)
