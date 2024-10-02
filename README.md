@@ -29,3 +29,24 @@ The target variable is “is_clicked” as mentioned in document
 - CTR (PxQxC) for 30 days and 7 days are correlated positively
 - Popular queries ,product suggestions are clicked more often than tail query type
 
+Data Preprocessing
+Using Data Transformations (Normalizing & Encoding Categorical variables) , Feature engineering and Feature Selection 
+
+Dropping Leaky Feature
+We need to drop these features as they contain information about the target variable 
+●	Total_clicks is a leaky feature as it directly predicts is_clicked column
+●	Query_products_clicks_last_30_days also suggest about is_clicked
+
+Dropping highly correlated features
+●	Plotting correlation matrix between numerical columns and then identifying corr_val>.7 
+●	When columns are highly correlated issues like Multicollinearity , Redundancies come into account
+
+Standardizing Numerical Columns 
+●	Using Standard Scaler to normalizing the numerical columns 
+●	The StandardScaler is used to standardize features by removing the mean and scaling to unit variance
+
+Encoding for Categorical Variables
+We had options of One hot encoding , Target encoding , label encoding and many more
+●	One hot encoding (Rejected) - High dimensionality is the main issue which will lead to high computational power and high ram requirement 
+●	Label Encoding(Rejected) - The values when label encoded will suggest for example search_query_1> search_query_2 where as this might not be true 
+●	Target encoding(accepted) -It reduces dimensionality of the data ,It is highly Cardinal feature as it summarizes one statistical value making it more informative
